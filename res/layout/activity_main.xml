@@ -1,0 +1,132 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
+
+    
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent">
+
+         
+    <RelativeLayout
+        android:id="@+id/mainContent"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent">
+<ImageView
+     android:id="@+id/activitymainimg"
+     android:layout_width="match_parent"
+     android:src="@drawable/musicback"
+     android:layout_height="fill_parent"
+     android:layout_alignParentLeft="true"
+     android:layout_alignParentTop="true"
+     android:scaleType="fitXY" />
+ <TextView
+     android:id="@+id/startdur"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignParentBottom="true"
+     android:layout_alignParentLeft="true"
+     android:text="Small Text"
+     android:textAppearance="?android:attr/textAppearanceSmall" />
+
+ <TextView
+     android:id="@+id/enddur"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignParentBottom="true"
+     android:layout_alignParentRight="true"
+     android:text="Small Text"
+     android:textAppearance="?android:attr/textAppearanceSmall" />
+
+ <SeekBar
+     android:id="@+id/seekBar1"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_above="@+id/startdur"
+     android:layout_alignParentLeft="true" />
+
+ <ImageView
+     android:id="@+id/imageButton1"
+     android:layout_width="50dp"
+     android:layout_height="40dp"
+     android:layout_above="@+id/seekBar1"
+     android:layout_centerHorizontal="true"
+     android:onClick="myplay1"
+     android:scaleType="fitXY"
+     android:src="@drawable/play_icon" />
+
+ <ImageView
+     android:id="@+id/imageView1"
+     android:onClick="mypause"
+     android:layout_width="50dp"
+     android:layout_height="40dp"
+     android:layout_above="@+id/seekBar1"
+     android:layout_toLeftOf="@+id/imageButton1"
+     android:src="@drawable/pause_icon" />
+
+ <ImageView
+     android:id="@+id/imageView2"
+     android:layout_width="50dp"
+     android:onClick="mystop"
+     android:layout_height="40dp"
+     android:layout_alignTop="@+id/imageButton1"
+     android:layout_toRightOf="@+id/imageButton1"
+     android:src="@drawable/stop_icon" />
+
+ <ImageView
+     android:id="@+id/imageView3"
+     android:layout_width="50dp"
+     android:layout_height="40dp"
+     android:layout_alignTop="@+id/imageView2"
+     android:layout_toRightOf="@+id/imageView2"
+     android:onClick="forward"
+     android:src="@drawable/forwind" />
+
+ <ImageView
+     android:id="@+id/imageView4"
+     android:layout_width="50dp"
+     android:layout_height="40dp"
+     android:onClick="rewind"
+     android:layout_alignTop="@+id/imageView1"
+     android:layout_toLeftOf="@+id/imageView1"
+     android:src="@drawable/rewind_icon" />
+
+ <ImageView
+     android:id="@+id/imageView6"
+     android:layout_width="50dp"
+     android:layout_height="40dp"
+     android:layout_alignTop="@+id/imageView3"
+     android:layout_toRightOf="@+id/imageView3"
+     android:src="@drawable/next" />
+
+ <ImageView
+     android:id="@+id/imageView5"
+     android:layout_width="50dp"
+     android:layout_height="40dp"
+     android:layout_alignParentLeft="true"
+     android:layout_alignTop="@+id/imageView4"
+     android:layout_toLeftOf="@+id/imageView4"
+     android:src="@drawable/prev" />
+
+ 
+
+        </RelativeLayout>
+        
+     
+  
+
+<ListView 
+    android:id="@+id/drawerList"
+    android:layout_marginTop="47dp"
+    android:entries="@array/planet"
+    android:divider="@null"
+    android:scrollbars="vertical"
+    android:layout_width="240dp"
+    android:layerType="none"
+    android:layout_height="match_parent"
+    android:layout_gravity="left">
+</ListView>
+
+</android.support.v4.widget.DrawerLayout>
+
+
+
+
